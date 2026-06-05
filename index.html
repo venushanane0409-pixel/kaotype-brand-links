@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顔タイプ別8タイプ ブランド公式リンク集</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --phi: 1.618;
+            --phi-1: 0.618;
+            --phi-2: 0.382;
+            --phi-3: 0.236;
+            --phi-4: 0.146;
+            
+            --cream: #fff7f2;
+            --pink: #f7e8ec;
+            --rose: #f0d1d9;
+            --gold: #c9a86a;
+            
+            --bg-start: #fff7f2;
+            --bg-end: #f7e8ec;
+            --card-bg: rgba(255, 255, 255, 0.55);
+            --border-color: #c9a86a;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
+            color: var(--text-dark);
+            line-height: 1.618;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            width: 100%;
+        }
+        
+        header {
+            padding: 2.618rem 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 2.618rem;
+            margin-bottom: 0.618rem;
+            color: var(--text-dark);
+            line-height: 1.272;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 2.618rem;
+        }
+        
+        .controls {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 1.618rem;
+            margin-bottom: 2.618rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 0.618rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.618rem;
+            font-size: 1rem;
+            margin-bottom: 1.618rem;
+            background: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(201, 168, 106, 0.2);
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 0.618rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .tab {
+            padding: 0.5rem 1.236rem;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .tab:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .tab.active {
+            background: var(--rose);
+            color: white;
+            border-color: var(--gold);
+        }
+        
+        .count {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+            gap: 1.618rem;
+            margin-bottom: 4.236rem;
+        }
+        
+        .brand-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 1.236rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .brand-card:hover {
+            transform: translateY(-0.382rem);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .brand-card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .brand-name {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.236rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .brand-url {
+            font-size: 0.8rem;
+            color: var(--gold);
+            word-break: break-all;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 4.236rem 0;
+            color: var(--text-light);
+            font-size: 1.236rem;
+        }
+        
+        footer {
+            margin-top: auto;
+            padding: 1.618rem 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            border-top: 1px solid rgba(201, 168, 106, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .brands-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>顔タイプ別8タイプ ブランド公式リンク集</h1>
+            <p class="subtitle">あなたの顔タイプに合ったブランド公式サイトへアクセス</p>
+        </header>
+        
+        <div class="controls">
+            <input type="text" class="search-box" placeholder="ブランド名で検索..." id="searchInput">
+            
+            <div class="tabs" id="tabs">
+                <div class="tab active" data-cat="all">すべて</div>
+                <div class="tab" data-cat="1">子供 × 直線</div>
+                <div class="tab" data-cat="2">大人 × 直線</div>
+                <div class="tab" data-cat="3">子供 × 曲線</div>
+                <div class="tab" data-cat="4">大人 × 曲線</div>
+            </div>
+            
+            <div class="count" id="count">0件</div>
+        </div>
+        
+        <main>
+            <div class="brands-grid" id="brandsGrid"></div>
+            <div class="no-results" id="noResults" style="display: none;">該当なし</div>
+        </main>
+    </div>
+    
+    <footer>
+        <p>©2025 一般社団法人日本顔タイプ診断協会 / ブランド公式リンクは各社公開情報です</p>
+    </footer>
+    
+    <script>
+        const BRANDS = [{"cat":1,"name":"GYDA","url":"https://runway-webstore.com/gyda/"},{"cat":1,"name":"EMODA","url":"https://runway-webstore.com/emoda/"},{"cat":1,"name":"MOUSSY","url":"https://moussy.shel-ter.com/"},{"cat":1,"name":"MURUA","url":"https://murua.shel-ter.com/"},{"cat":1,"name":"SLY","url":"https://sly.shel-ter.com/"},{"cat":1,"name":"Ungrid","url":"https://ungrid.shel-ter.com/"},{"cat":1,"name":"ACLENT","url":"https://aclent.shop/"},{"cat":1,"name":"UN3D.","url":"https://un3d.tv/"},{"cat":1,"name":"HARE","url":"https://www.dot-st.com/hare/"},{"cat":1,"name":"PAGEBOY","url":"https://www.dot-st.com/pageboy/"},{"cat":1,"name":"HYKE","url":"https://hyke.jp/"},{"cat":1,"name":"FIG&VIPER","url":"https://www.figandviper.com/"},{"cat":1,"name":"X-girl","url":"https://www.x-girl.jp/"},{"cat":1,"name":"RODEO CROWNS","url":"https://baycrews.jp/brand/detail/rodeocrowns"},{"cat":1,"name":"BEAMS BOY","url":"https://www.beams.co.jp/beamsboy/"},{"cat":1,"name":"MILKFED.","url":"https://www.milkfed.jp/"},{"cat":1,"name":"coca","url":"https://coca-fashion.com/"},{"cat":1,"name":"niko and...","url":"https://www.dot-st.com/nikoand/"},{"cat":1,"name":"MARGARET HOWELL","url":"https://www.margarethowell.jp/"},{"cat":1,"name":"MACKINTOSH PHILOSOPHY","url":"https://mackintosh-philosophy.sanyo-i.jp/"},{"cat":1,"name":"Bshop","url":"https://www.bshop-inc.com/"},{"cat":1,"name":"FREAK'S STORE","url":"https://www.freaksstore.com/"},{"cat":1,"name":"HÉLIOPÔLE","url":"https://www.heliopole-net.com/"},{"cat":1,"name":"MACPHEE","url":"https://store.tomorrowland.co.jp/"},{"cat":1,"name":"Shinzone（THE SHINZONE）","url":"https://theshinzone.com/"},{"cat":1,"name":"GLOBAL WORK","url":"https://www.dot-st.com/globalwork/"},{"cat":1,"name":"DISCOAT","url":"https://www.dot-st.com/discoat/"},{"cat":1,"name":"relume（JOURNAL STANDARD relume）","url":"https://journal-standard.jp/"},{"cat":1,"name":"green label relaxing","url":"https://store.united-arrows.co.jp/brand/glr/"},{"cat":1,"name":"IÉNA","url":"https://www.iena.jp/"},{"cat":1,"name":"human woman","url":"https://humanwoman.jp/"},{"cat":1,"name":"sacai","url":"https://www.sacai.jp/"},{"cat":1,"name":"RIM.ARK","url":"https://baycrews.jp/brand/detail/rimark"},{"cat":1,"name":"RALPH LAUREN","url":"https://www.ralphlauren.co.jp/"},{"cat":1,"name":"FREDY & GLOSTER","url":"https://fredygloster.jp/"},{"cat":1,"name":"KBF","url":"https://www.dot-st.com/kbf/"},{"cat":1,"name":"JEANASIS","url":"https://www.dot-st.com/jeanasis/"},{"cat":1,"name":"Spick & Span","url":"https://baycrews.jp/brand/detail/spickandspan"},{"cat":1,"name":"AMERICAN HOLIC","url":"https://www.stripe-club.com/american-holic"},{"cat":1,"name":"COLLAGE GALLARDAGALANTE / GALLARDAGALANTE","url":"https://www.gallardagalante.com/"},{"cat":1,"name":"FRAMeWORK","url":"https://baycrews.jp/brand/detail/framework"},{"cat":1,"name":"TOGA（TOGA ARCHIVES）","url":"https://toga.jp/"},{"cat":1,"name":"depart by LOWRYS / LOWRYS FARM","url":"https://www.dot-st.com/lowrysfarm/"},{"cat":1,"name":"PUBLIC TOKYO","url":"https://public-tokyo.com/"},{"cat":1,"name":"STUDIOUS","url":"https://www.studious.co.jp/"},{"cat":1,"name":"URBAN RESEARCH DOORS","url":"https://www.urban-research.jp/"},{"cat":1,"name":"B:MING by BEAMS","url":"https://www.beams.co.jp/"},{"cat":1,"name":"JOURNAL STANDARD","url":"https://journal-standard.jp/"},{"cat":1,"name":"BEAUTY&YOUTH UNITED ARROWS","url":"https://store.united-arrows.co.jp/"},{"cat":2,"name":"Theory","url":"https://www.theory.co.jp/"},{"cat":2,"name":"theory luxe","url":"https://www.theory-luxe.com/"},{"cat":2,"name":"UNITED TOKYO","url":"https://united-tokyo.com/"},{"cat":2,"name":"CLANE","url":"https://clane.jp/"},{"cat":2,"name":"PLST（P.L.S.T）","url":"https://www.plst.com/"},{"cat":2,"name":"Mila Owen","url":"https://baycrews.jp/brand/detail/milaowen"},{"cat":2,"name":"INDIVI","url":"https://store.world.co.jp/s/brand/indivi/"},{"cat":2,"name":"YECCA VECCA","url":"https://www.dot-st.com/yeccavecca/"},{"cat":2,"name":"Plage","url":"https://baycrews.jp/brand/detail/plage"},{"cat":2,"name":"INÉD","url":"https://www.nippnstyle.jp/shop/ined/"},{"cat":2,"name":"SLOBE IÉNA","url":"https://www.iena.jp/"},{"cat":2,"name":"SHIPS","url":"https://www.shipsltd.co.jp/"},{"cat":2,"name":"BANANA REPUBLIC","url":"https://bananarepublic.gap.co.jp/"},{"cat":2,"name":"1er Arrondissement","url":"https://www.sanyo-i.jp/"},{"cat":2,"name":"Chaos","url":"https://chaos-net.jp/"},{"cat":2,"name":"OFUON","url":"https://www.world.co.jp/ofuon/"},{"cat":2,"name":"23区","url":"https://store.world.co.jp/s/brand/23ku/"},{"cat":2,"name":"Demi-Luxe BEAMS","url":"https://www.beams.co.jp/"},{"cat":2,"name":"ADORE","url":"https://www.adore-web.jp/"},{"cat":2,"name":"DES PRÉS","url":"https://store.tomorrowland.co.jp/"},{"cat":2,"name":"ebure","url":"https://ebure.jp/"},{"cat":2,"name":"DKNY","url":"https://www.dkny.com/"},{"cat":2,"name":"Calvin Klein","url":"https://www.calvinklein.jp/"},{"cat":2,"name":"qualité（カリテ）","url":"https://qualite-clothes.jp/"},{"cat":2,"name":"Deuxième Classe","url":"https://baycrews.jp/brand/detail/deuxiemeclasse"},{"cat":2,"name":"UNITED ARROWS","url":"https://store.united-arrows.co.jp/"},{"cat":2,"name":"OPAQUE.CLIP","url":"https://www.dot-st.com/opaqueclip/"},{"cat":2,"name":"Green Parks","url":"https://www.stripe-club.com/green-parks"},{"cat":2,"name":"BEIGE,","url":"https://www.beige.co.jp/"},{"cat":2,"name":"BARNEYS NEW YORK","url":"https://www.barneys.co.jp/"},{"cat":2,"name":"LE PHIL","url":"https://lephil.theory.co.jp/"},{"cat":2,"name":"自由区（JIYUKU）","url":"https://store.world.co.jp/s/brand/jiyuku/"},{"cat":2,"name":"AMACA","url":"https://store.world.co.jp/s/brand/amaca/"},{"cat":2,"name":"ROPÉ","url":"https://www.junonline.jp/rope/"},{"cat":2,"name":"iCB","url":"https://www.icb.jp/"},{"cat":2,"name":"JOSEPH","url":"https://www.joseph-fashion.jp/"},{"cat":2,"name":"ESTNATION","url":"https://www.estnation.co.jp/"},{"cat":2,"name":"BABYLONE","url":"https://www.dot-st.com/babylone/"},{"cat":2,"name":"NOBLE","url":"https://baycrews.jp/brand/detail/noble"},{"cat":2,"name":"EFFE BEAMS","url":"https://www.beams.co.jp/"},{"cat":2,"name":"Whim Gazette","url":"https://www.whim-gazette.com/"},{"cat":2,"name":"TOMORROWLAND","url":"https://store.tomorrowland.co.jp/"},{"cat":2,"name":"Ameri（AMERI VINTAGE）","url":"https://amerivintage.co.jp/"},{"cat":2,"name":"NANO universe","url":"https://www.nanouniverse.jp/"},{"cat":2,"name":"DOUBLE STANDARD CLOTHING","url":"https://www.double-standard.co.jp/"},{"cat":2,"name":"RESEXXY","url":"https://runway-webstore.com/resexxy/"},{"cat":2,"name":"Diagram","url":"https://www.grace-store.jp/"},{"cat":2,"name":"UR（URBAN RESEARCH）","url":"https://www.urban-research.jp/"},{"cat":2,"name":"index","url":"https://www.world-onlinestore.com/"},{"cat":2,"name":"SENSE OF PLACE（URBAN RESEARCH）","url":"https://www.urban-research.jp/"},{"cat":2,"name":"STUNNING LURE","url":"https://baycrews.jp/brand/detail/stunninglure"},{"cat":2,"name":"FREDY emue","url":"https://fredygloster.jp/"},{"cat":3,"name":"SM2（Samansa Mos2）","url":"https://www.samansa-mos2.com/"},{"cat":3,"name":"GRL（グレイル）","url":"https://www.grl.co.jp/"},{"cat":3,"name":"Heather","url":"https://www.dot-st.com/heather/"},{"cat":3,"name":"Té chichi","url":"https://www.tcfs.co.jp/"},{"cat":3,"name":"QUEENS COURT","url":"https://www.world.co.jp/"},{"cat":3,"name":"LAISSÉ PASSE","url":"https://www.laissepasse.jp/"},{"cat":3,"name":"tocco closet","url":"https://www.tocco-closet.com/"},{"cat":3,"name":"evelyn","url":"https://evelyn.tokyo.jp/"},{"cat":3,"name":"FREE'S MART","url":"https://freesmart.shop/"},{"cat":3,"name":"MAJESTIC LEGON","url":"https://www.stripe-club.com/majestic-legon"},{"cat":3,"name":"any SiS","url":"https://www.onward-crosset.com/anysis/"},{"cat":3,"name":"flower（フラワー）","url":"https://www.flower-onlineshop.com/"},{"cat":3,"name":"WILLSELECTION","url":"https://willselection.jp/"},{"cat":3,"name":"natural couture","url":"https://www.osharewalker.com/shop/naturalcouture/"},{"cat":3,"name":"agnès b.","url":"https://www.agnesb.co.jp/"},{"cat":3,"name":"archives","url":"https://archives-web.com/"},{"cat":3,"name":"DEICY","url":"https://deicy.jp/"},{"cat":3,"name":"TITTY&Co.","url":"https://tittyandco.jp/"},{"cat":3,"name":"ketty","url":"https://www.ginza-zakka.com/"},{"cat":3,"name":"AS KNOW AS","url":"https://asknowas.com/"},{"cat":3,"name":"NICE CLAUP","url":"https://niceclaup.shop/"},{"cat":3,"name":"Aveniretoile","url":"https://aveniretoile.com/"},{"cat":3,"name":"Án MILLE（アンミール）","url":"https://anmille.tokyo/"},{"cat":3,"name":"MIIA","url":"https://miia.tokyo.jp/"},{"cat":3,"name":"studio CLIP","url":"https://www.dot-st.com/studioclip/"},{"cat":3,"name":"INGNI","url":"https://www.ingni-store.com/"},{"cat":3,"name":"31 Sons de mode","url":"https://www.31sons.jp/"},{"cat":3,"name":"TO BE CHIC","url":"https://store.world.co.jp/s/brand/tobechic/"},{"cat":3,"name":"TIARA","url":"https://www.tiara-onlinestore.jp/"},{"cat":3,"name":"Kastane","url":"https://www.dot-st.com/kastane/"},{"cat":3,"name":"earth music&ecology","url":"https://www.stripe-club.com/earth-music-ecology"},{"cat":3,"name":"titivate","url":"https://www.titivate.jp/"},{"cat":3,"name":"CIAOPANIC","url":"https://www.dot-st.com/ciaopanic/"},{"cat":3,"name":"SPIRALGIRL","url":"https://spiralgirl.jp/"},{"cat":3,"name":"PUNYUS","url":"https://punyus.jp/"},{"cat":3,"name":"merry jenny","url":"https://runway-webstore.com/merryjenny/"},{"cat":3,"name":"MACKINTOSH LONDON","url":"https://mackintoshlondon.sanyo-i.jp/"},{"cat":3,"name":"LANVIN en Bleu","url":"https://www.lanvin-en-bleu.com/"},{"cat":3,"name":"REDYAZEL","url":"https://www.redyazel.jp/"},{"cat":3,"name":"jouetie","url":"https://runway-webstore.com/jouetie/"},{"cat":3,"name":"ライチ（RAY CASSIN系）","url":"https://www.osharewalker.com/"},{"cat":3,"name":"mysty woman","url":"https://www.stripe-club.com/mysty-woman"},{"cat":3,"name":"LILY BROWN","url":"https://www.lilybrown.jp/"},{"cat":3,"name":"ROSE BUD","url":"https://www.rosebud-online.com/"},{"cat":3,"name":"ROSSO（URBAN RESEARCH ROSSO）","url":"https://www.urban-research.jp/"},{"cat":3,"name":"VIS","url":"https://www.stripe-club.com/vis"},{"cat":3,"name":"emmi","url":"https://emmi-onlinestore.com/"},{"cat":3,"name":"kate spade NEW YORK","url":"https://www.katespade.jp/"},{"cat":3,"name":"MAISON SPECIAL","url":"https://maisonspecial.co.jp/"},{"cat":3,"name":"ADAM ET ROPÉ","url":"https://www.junonline.jp/adametrope/"},{"cat":3,"name":"Maison de Beige","url":"https://www.maisondebeige.jp/"},{"cat":3,"name":"ENFÖLD","url":"https://enfold.tv/"},{"cat":3,"name":"To b. by agnès b.","url":"https://www.agnesb.co.jp/"},{"cat":3,"name":"M'S GRACY","url":"https://www.msgracy.com/"},{"cat":4,"name":"SNIDEL","url":"https://snidel.com/"},{"cat":4,"name":"FRAY I.D","url":"https://frayid.com/"},{"cat":4,"name":"FOXEY","url":"https://www.foxey.co.jp/"},{"cat":4,"name":"ANAYI","url":"https://www.anayi.co.jp/"},{"cat":4,"name":"EPOCA","url":"https://www.epoca.jp/"},{"cat":4,"name":"René（ルネ）","url":"https://www.rene-cl.com/"},{"cat":4,"name":"Apuweiser-riche","url":"https://www.apuweiserriche.jp/"},{"cat":4,"name":"JUSGLITTY","url":"https://www.jusglitty.jp/"},{"cat":4,"name":"Rirandture","url":"https://rirandture.jp/"},{"cat":4,"name":"Arpege story","url":"https://ap-story.jp/"},{"cat":4,"name":"CADUNÉ","url":"https://cadune.jp/"},{"cat":4,"name":"dazzlin","url":"https://runway-webstore.com/dazzlin/"},{"cat":4,"name":"And Couture","url":"https://www.andcouture.co.jp/"},{"cat":4,"name":"Andemiu","url":"https://andemiu.tokyo.jp/"},{"cat":4,"name":"MISCH MASCH","url":"https://mischmasch.jp/"},{"cat":4,"name":"rienda","url":"https://runway-webstore.com/rienda/"},{"cat":4,"name":"fifth","url":"https://www.fifth-store.com/"},{"cat":4,"name":"SHENERY","url":"https://www.dot-st.com/shenery/"},{"cat":4,"name":"UNTITLED","url":"https://store.world.co.jp/s/brand/untitled/"},{"cat":4,"name":"La TOTALITE","url":"https://baycrews.jp/brand/detail/latotalite"},{"cat":4,"name":"ROPÉ PICNIC","url":"https://www.junonline.jp/ropepicnic/"},{"cat":4,"name":"KOBE LETTUCE","url":"https://www.lettuce.co.jp/"},{"cat":4,"name":"Noëla","url":"https://noela.jp/"},{"cat":4,"name":"a.v.v","url":"https://www.avv-web.com/"},{"cat":4,"name":"NATURAL BEAUTY BASIC","url":"https://www.nb-basic.jp/"},{"cat":4,"name":"M-PREMIER","url":"https://www.m-premier.com/"},{"cat":4,"name":"PROPORTION BODY DRESSING","url":"https://www.proportion-bodydressing.jp/"},{"cat":4,"name":"COCO DEAL","url":"https://www.tkstyle.jp/cocodeal/"},{"cat":4,"name":"NOLLEY'S","url":"https://www.nolleys.co.jp/"},{"cat":4,"name":"ur's（ユアーズ）","url":"https://urs-onlinestore.jp/"},{"cat":4,"name":"ánuans","url":"https://anuans.com/"},{"cat":4,"name":"DHOLIC","url":"https://www.dholic.co.jp/"},{"cat":4,"name":"TONAL","url":"https://tonal-japan.com/"},{"cat":4,"name":"12Twelve Agenda","url":"https://www.tk-12.jp/"},{"cat":4,"name":"martinique","url":"https://martinique.jp/"},{"cat":4,"name":"LAGUNAMOON","url":"https://www.tkstyle.jp/lagunamoon/"},{"cat":4,"name":"Loungedress","url":"https://www.palcloset.jp/loungedress/"},{"cat":4,"name":"LOUNIE","url":"https://lounie.jp/"},{"cat":4,"name":"allureville","url":"https://www.allureville.com/"},{"cat":4,"name":"CELFORD","url":"https://celford.com/"},{"cat":4,"name":"COUP DE CHANCE","url":"https://www.onward-crosset.com/coupdechance/"},{"cat":4,"name":"Mystrada","url":"https://www.mystrada.jp/"},{"cat":4,"name":"DRWCYS","url":"https://www.drwcys.jp/"},{"cat":4,"name":"ROYAL PARTY","url":"https://royalparty.jp/"},{"cat":4,"name":"MOGA","url":"https://store.world.co.jp/s/brand/moga/"},{"cat":4,"name":"EMMEL REFINES","url":"https://baycrews.jp/brand/detail/emmelrefines"},{"cat":4,"name":"MERCURYDUO","url":"https://runway-webstore.com/mercuryduo/"},{"cat":4,"name":"STRAWBERRY-FIELDS","url":"https://www.strawberry-fields.co.jp/"},{"cat":4,"name":"Her lip to","url":"https://herlipto.jp/"},{"cat":4,"name":"Swingle","url":"https://www.swingle-onlinestore.jp/"},{"cat":4,"name":"GRACE CONTINENTAL","url":"https://www.grace-store.jp/"}];
+        
+        const CATS = {
+            1: {label: "子供 × 直線", sub: "フレッシュ／アクティブキュート"},
+            2: {label: "大人 × 直線", sub: "クール／クールカジュアル"},
+            3: {label: "子供 × 曲線", sub: "キュート／アクティブキュート"},
+            4: {label: "大人 × 曲線", sub: "フェミニン／ソフトエレガント／エレガント"}
+        };
+        
+        let currentFilter = 'all';
+        let currentSearch = '';
+        
+        const searchInput = document.getElementById('searchInput');
+        const tabs = document.getElementById('tabs');
+        const brandsGrid = document.getElementById('brandsGrid');
+        const countElement = document.getElementById('count');
+        const noResults = document.getElementById('noResults');
+        
+        // 検索機能
+        searchInput.addEventListener('input', (e) => {
+            currentSearch = e.target.value.toLowerCase();
+            renderBrands();
+        });
+        
+        // タブフィルター
+        tabs.addEventListener('click', (e) => {
+            if (e.target.classList.contains('tab')) {
+                document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+                e.target.classList.add('active');
+                currentFilter = e.target.dataset.cat;
+                renderBrands();
+            }
+        });
+        
+        // ブランドのレンダリング
+        function renderBrands() {
+            let filteredBrands = BRANDS;
+            
+            // カテゴリフィルター
+            if (currentFilter !== 'all') {
+                filteredBrands = filteredBrands.filter(brand => brand.cat === parseInt(currentFilter));
+            }
+            
+            // 検索フィルター
+            if (currentSearch) {
+                filteredBrands = filteredBrands.filter(brand => 
+                    brand.name.toLowerCase().includes(currentSearch)
+                );
+            }
+            
+            // 件数表示
+            countElement.textContent = `${filteredBrands.length}件`;
+            
+            // 結果表示
+            if (filteredBrands.length === 0) {
+                brandsGrid.style.display = 'none';
+                noResults.style.display = 'block';
+                return;
+            }
+            
+            brandsGrid.style.display = 'grid';
+            noResults.style.display = 'none';
+            
+            // カードの生成
+            brandsGrid.innerHTML = '';
+            filteredBrands.forEach(brand => {
+                const card = document.createElement('div');
+                card.className = 'brand-card';
+                
+                const link = document.createElement('a');
+                link.href = brand.url;
+                link.target = '_blank';
+                link.rel = 'noopener';
+                
+                const name = document.createElement('div');
+                name.className = 'brand-name';
+                name.textContent = brand.name;
+                
+                const url = document.createElement('div');
+                url.className = 'brand-url';
+                url.textContent = brand.url;
+                
+                link.appendChild(name);
+                link.appendChild(url);
+                card.appendChild(link);
+                brandsGrid.appendChild(card);
+            });
+        }
+        
+        // 初期レンダリング
+        renderBrands();
+    </script>
+</body>
+</html>
